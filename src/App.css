@@ -1,8 +1,195 @@
-html {
-  color-scheme: light dark;
-  font-family: system-ui;
+.header{
   display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.links{
+  margin-right: 70px;
+  margin-top: 19px;
+}
+
+.restaurant-card{
+  width: 240px;
+  min-height: 320px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  border: 1px solid transparent;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  background: #fff;
+}
+
+.restaurant-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ff9800;
+  cursor: pointer;
+}
+
+.res-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  height: 100%;
+}
+
+.restaurant-card > img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.restaurant-card > h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  text-align: center;
+  min-height: 2.5em;
+}
+.restaurant-card > p {
+  margin: 5px 0;
+  text-align: center;
+  min-height: 1.5em;
+}
+
+.login-btn {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.login-btn:hover {
+  background-color: #e68900;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.res-menu {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.deal-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.rating {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.category {
+    color: #ff6200;
+    font-weight: bold;
+}
+
+.location {
+    color: #6c757d;
+}
+
+.recommendations, .late-night {
+    margin-bottom: 20px;
+}
+
+.recommendations h2, .late-night h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.item-details {
+    flex: 1;
+}
+
+.bestseller {
+    color: #ff6200;
+    font-weight: bold;
+}
+
+h3 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.price {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.rating {
+    color: #28a745;
+}
+
+p {
+    font-size: 12px;
+    color: #6c757d;
+    margin: 5px 0;
+}
+
+.item-image {
+    text-align: right;
+}
+
+.item-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.add-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.customizable {
+    font-size: 12px;
+    color: #6c757d;
 }
