@@ -23,6 +23,7 @@ export default function Header() {
           <li><Link to="/about">About</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>
           <li>Cart</li>
+          <li><Link to="/grocery">Grocery</Link></li>
           <button className="login-btn" onClick={()=>{
             isLoggedIn === "Login" ? setIsLoggedIn("Logout") : setIsLoggedIn("Login");
           }}>{isLoggedIn}</button>

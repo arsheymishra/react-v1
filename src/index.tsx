@@ -5,6 +5,10 @@ import About from './components/About';
 import NotFound from './components/NotFound'
 import ResMenu from './components/ResMenu';
 import { createRoot } from 'react-dom/client';
+import { lazy, Suspense } from 'react';
+
+
+const Grocery  = lazy(()=> import("./components/Grocery"));
 
 const router = createBrowserRouter([
   {
@@ -22,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/restaurants/:resId",
         element: <ResMenu/>
+      },
+      {
+        path: "/grocery",
+        element:  <Suspense fallback={<div><h1>Loading...</h1></div>}><Grocery/></Suspense>
       }
     ],
     errorElement: <NotFound />,
