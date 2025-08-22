@@ -1,27 +1,10 @@
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { RES_MENU_LIST } from "../utils/constants";
-
+import useRestaurantMenu from "../utils/useRestaurantMenu"
 const ResMenu = () => {
-  const [menuList, setMenuList] = useState([]);
-  const [resName, setResName] = useState("");
 
   const {resId} = useParams();
 
-  const fetchData = async () => {
-    const data = await fetch(RES_MENU_LIST + resId);
-    const json = await data.json();
-
-    const menu = json?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards || [];
-    const name = json?.data?.cards[2]?.card?.card?.info?.name || "Restaurant Menu";
-
-    setResName(name);
-    setMenuList(menu);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const {resName,menuList} = useRestaurantMenu(resId);
 
   return (
     <div className="res-menu">

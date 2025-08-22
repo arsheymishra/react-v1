@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import RestaurantCard from './RestaurantCard';
 import { useEffect, useState } from 'react';
+import useOnlineStatus from "../utils/useOnlineStatus"
 
 const TOP_RATED_THRESHOLD = 4.0;
 
@@ -21,6 +22,12 @@ const Body = () => {
     useEffect(()=>{
       fetchData();
     },[])
+
+    const status = useOnlineStatus();
+
+  if(status=== false) return (
+    <h1 className='offile'>Looks Like you are offline</h1>
+  )
 
   return (
     <div className='body'>
